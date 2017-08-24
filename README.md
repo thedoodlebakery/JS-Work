@@ -1,1 +1,2 @@
-#JS-Work
+# JS-Work
+Random practice JS scripts.
