@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Getting Started with Javascript</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body{padding:30px;}
+</style>
+</head>
+<body>
+
+
+
+<!--  start javascript -->
+  <script>
+     let a = 10,
+        b = 3,
+        c = 15;
+     let d = '5',
+        e = 'my name',
+        f = 'is chris';
+
+// changed above 'const' to 'let' because the "a++" in the increenting is causing an error. The browser thinks that it is being reassigned. So we changed the variable from const to let.
+
+
+console.groupCollapsed('Addition')
+      console.log(a + b); //13
+      console.log(a + c); //25
+      console.log(a - b); //7
+      console.log(e + ' '+ f)
+      console.log(a + d) //105
+      console.log(e + ' is batman');
+console.groupEnd();
+
+console.groupCollapsed('Multiplication')
+      console.log(a * 3); // 30
+      console.log(a * b); // 30
+      console.log(b * c); // 45
+console.groupEnd();
+
+console.group('Incrementing');
+      console.log(a + 1); //10
+      console.log(a++);
+      console.log(c += a);
+console.groupEnd();
+
+e += f;
+
+  </script>
+</body>
+</html>

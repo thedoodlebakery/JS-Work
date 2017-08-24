@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Getting Started with Javascript</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body{padding:30px;}
+</style>
+</head>
+<body>
+
+
+
+<!--  start javascript -->
+<script>
+
+    const original = 'chris'
+    const clone    = 'CHRIS'
+
+    console.groupCollapsed('String');
+      console.log(original == 'chris'); //true
+      console.log(original == clone); //false
+      console.log(original == clone.toLowerCase()); //true
+    console.groupEnd();
+
+    const num1 = 10;
+    const num2 = '10';
+
+    console.groupCollapsed('Numbers');
+      console.log(num1 == num2); // true, coercion is happening. (JS is converting the number into a string to compare both variables. After converting the number 10 to a string, it is correct in thinking both variables are equal.)
+      console.log(num1 === num2); // false, coercion is not allowed.(JS is not converting the integer variable into a string. Instead it comparing number vs the string in aspects of 1) Are they both strings?; 2) Are they equal to one another, as an integer and a string?;)
+      console.log(num1 != num2); // false
+      console.log(num1 !== num2); // true, no coercion is allowed
+    console.groupEnd();
+
+    let what; // undefined
+    let thing = null;
+
+    console.groupCollapsed('Booleans');
+      console.log(Boolean(what)); // false
+      console.log(Boolean(thing)); // false
+      console.log(Boolean(num1)); // true
+      console.log(Boolean(num2)); // true
+      console.log(Boolean({})); // true
+      console.log(Boolean([])); // true
+    console.groupEnd();
+
+
+    const firstArr =  [1, 2, 3];
+    const secondArr = [1, 2, 3];
+    const firstObj=   {color: 'red'}; // objects with the same keys and values will not be equal to objects with the same keys and values. So they will always be false when compared to one another.
+    const secondObj = {color: 'red'};
+
+    console.groupCollapsed('Objects and Arrays');
+      console.log(firstArr == secondArr); // false
+      console.log(firstObj == secondObj); // false
+    console.groupEnd();
+
+    console.group('And Or');
+      console.log(Boolean('blah') && Boolean('thing')); // true
+      console.log(Boolean('blah') && Boolean('')); // false
+      console.log(Boolean('blah') || Boolean('')); // true
+      console.log(Boolean('') || Boolean('')); // false
+    console.groupEnd();
+
+
+
+</script>
+</body>
+</html>
